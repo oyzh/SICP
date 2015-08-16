@@ -1,0 +1,8 @@
+(define ret '())
+(define (fringe x)
+  (if (not (pair? x))
+      (if (null? x)
+	  '()
+	  (list x))
+      (append (fringe (car x))
+	     (fringe (cdr x)))))
